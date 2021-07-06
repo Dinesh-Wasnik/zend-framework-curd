@@ -22,6 +22,8 @@ return [
     'Zend\Validator',
     'DoctrineModule',
     'Application',
+    'Crud',
     'DoctrineModule',
     'DoctrineORMModule',  
+      
 ];
