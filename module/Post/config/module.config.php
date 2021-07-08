@@ -5,7 +5,7 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace Crud;
+namespace Post;
 
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
@@ -24,10 +24,10 @@ return [
                     ],
                 ],
             ],
-            'crud' => [
+            'application' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/crud[/:action]',
+                    'route'    => '/post[/:action]',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'index',
@@ -49,7 +49,7 @@ return [
         'exception_template'       => 'error/index',
         'template_map' => [
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'crud/index/index'        => __DIR__ . '/../view/crud/index/index.phtml',
+            'post/index/index'        => __DIR__ . '/../view/post/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
         ],

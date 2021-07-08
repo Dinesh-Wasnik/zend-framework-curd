@@ -5,14 +5,15 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace Curd;
+namespace Post\Controller;
 
-class Module
+use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Model\ViewModel;
+
+class IndexController extends AbstractActionController
 {
-    const VERSION = '3.1.4dev';
-
-    public function getConfig()
+    public function indexAction()
     {
-        return include __DIR__ . '/../config/module.config.php';
+        return new ViewModel();
     }
 }

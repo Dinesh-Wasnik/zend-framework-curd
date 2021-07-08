@@ -23,12 +23,13 @@
     "autoload": {
         "psr-4": {
             "Application\\": "module/Application/src/",
-            "Crud\\": "module/Crud/src/"
+            "Post\\": "module/Post/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ApplicationTest\\": "module/Application/test/"
+            "ApplicationTest\\": "module/Application/test/",
+            "CrudTest\\": "module/Crud/test/"
         }
     },
     "scripts": {

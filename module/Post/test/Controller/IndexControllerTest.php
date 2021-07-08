@@ -5,9 +5,9 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace CrudsTest\Controller;
+namespace ApplicationTest\Controller;
 
-use Crud\Controller\IndexController;
+use Application\Controller\IndexController;
 use Zend\Stdlib\ArrayUtils;
 use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
@@ -21,8 +21,8 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         // etc.
         $configOverrides = [];
 
-        $this->setCrudConfig(ArrayUtils::merge(
-            include __DIR__ . '/../../../../config/crud.config.php',
+        $this->setApplicationConfig(ArrayUtils::merge(
+            include __DIR__ . '/../../../../config/application.config.php',
             $configOverrides
         ));
 
@@ -33,7 +33,7 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
     {
         $this->dispatch('/', 'GET');
         $this->assertResponseStatusCode(200);
-        $this->assertModuleName('crud');
+        $this->assertModuleName('application');
         $this->assertControllerName(IndexController::class); // as specified in router's controller name alias
         $this->assertControllerClass('IndexController');
         $this->assertMatchedRouteName('home');
