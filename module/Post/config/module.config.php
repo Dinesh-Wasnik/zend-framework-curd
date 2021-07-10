@@ -24,7 +24,7 @@ return [
                     ],
                 ],
             ],
-            'application' => [
+            'post' => [
                 'type'    => Segment::class,
                 'options' => [
                     'route'    => '/post[/:action]',
@@ -38,7 +38,6 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
