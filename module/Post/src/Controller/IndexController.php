@@ -26,7 +26,7 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         $posts = $this->table->fetchAll();
-
+        
         var_dump($posts);exit;
         // return new ViewModel();
     }

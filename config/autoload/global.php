@@ -12,30 +12,30 @@
  */
 
 return [
-    // 'doctrine' => [        
-    //     // migrations configuration
-    //     'migrations_configuration' => [
-    //         'orm_default' => [
-    //             'directory' => 'data/Migrations',
-    //             'name'      => 'Doctrine Database Migrations',
-    //             'namespace' => 'Migrations',
-    //             'table'     => 'migrations',
-    //         ],
-    //     ],
-    // ],
+    'doctrine' => [        
+        // migrations configuration
+        'migrations_configuration' => [
+            'orm_default' => [
+                'directory' => 'data/Migrations',
+                'name'      => 'Doctrine Database Migrations',
+                'namespace' => 'Migrations',
+                'table'     => 'migrations',
+            ],
+        ],
+    ],
    'db' => [ 
       'driver' => 'Pdo', 
       'dsn' => 'mysql:dbname=zend_crud;host=localhost',
       'username' => 'root',
       'password' => '', 
-      // 'driver_options' => [ 
-      //    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\'' 
-      // ], 
+      'driver_options' => [ 
+         PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\'' 
+      ], 
    ], 
-    // 'service_manager' => [
-    //         'factories' => [
-    //             'Zend\Db\Adapter\Adapter' => 
-    //             'Zend\Db\Adapter\AdapterServiceFactory',
-    //         ],
-    //     ],   
+    'service_manager' => [
+            'factories' => [
+                'Zend\Db\Adapter\Adapter' => 
+                'Zend\Db\Adapter\AdapterServiceFactory',
+            ],
+        ],   
 ];
