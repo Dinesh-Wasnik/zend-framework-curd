@@ -28,8 +28,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ApplicationTest\\": "module/Application/test/",
-            "CrudTest\\": "module/Crud/test/"
+            "ApplicationTest\\": "module/Application/test/"
         }
     },
     "scripts": {
