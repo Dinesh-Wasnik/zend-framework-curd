@@ -21,5 +21,4 @@ class PostTable{
    public  function fetchAll(){
    	 return $this->tableGateway->select();
    }
-
 }
